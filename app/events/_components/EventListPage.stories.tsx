@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { EventListPage } from './EventListPage';
-import { Header } from '../layout/Header';
-import { Footer } from '../layout/Footer';
+import { Header } from '../../_components/layout/Header';
+import { Footer } from '../../_components/layout/Footer';
 
 const meta = {
   title: 'Pages/EventListPage',
