@@ -1,0 +1,6 @@
+/* Tailwind CSS インポートのためのファイル
+ * これはStorybookでTailwindを正しく動作させるための特別なファイルです
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
