@@ -105,6 +105,3 @@ npm run start
 yarn start
 ```
 
-## ライセンス
-
-© 2023 Dance Team. All rights reserved.
