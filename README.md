@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dance - パフォーマンスチケット販売プラットフォーム
 
-## Getting Started
+パフォーマンス系イベントのチケット販売プラットフォーム「Dance」のフロントエンドプロジェクトです。舞台、コンサート、ダンスショーなどのイベント検索や予約機能を提供します。
 
-First, run the development server:
+## 技術スタック
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **フレームワーク**: [Next.js 14](https://nextjs.org/) (App Router)
+- **言語**: [TypeScript](https://www.typescriptlang.org/)
+- **スタイリング**: [Tailwind CSS](https://tailwindcss.com/)
+- **UIドキュメント**: [Storybook](https://storybook.js.org/)
+- **バックエンド**: [Supabase](https://supabase.com/) (計画中)
+- **テスト**: [Vitest](https://vitest.dev/)
+
+## プロジェクト構造
+
+プロジェクトは以下のパターンに基づいて構成されています：
+
+```
+app
+├── <Segment> (例: events, dashboard, settings など)
+│  ├── page.tsx           # ページコンポーネント
+│  ├── layout.tsx         # セグメント特有のレイアウト
+│  ├── _components/       # セグメント特有のコンポーネント
+│  └── ...
+├── _components/          # アプリケーション全体で使用する汎用コンポーネント
+│  ├── ui/                # 基本的なUIコンポーネント
+│  ├── layout/            # レイアウト関連コンポーネント
+│  └── ...
+├── _lib/                 # アプリケーション全体で使用する汎用関数
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発環境の準備
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 必要条件
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js 18.17.0以上
+- npm または yarn
 
-## Learn More
+### インストール
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# リポジトリのクローン
+git clone <repository-url>
+cd dance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 依存関係のインストール
+npm install
+# または
+yarn install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 開発サーバーの起動
 
-## Deploy on Vercel
+```bash
+# 開発サーバーの起動
+npm run dev
+# または
+yarn dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[http://localhost:3000](http://localhost:3000) にアクセスして開発中のアプリケーションを確認できます。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Storybookの起動
+
+UIコンポーネントの開発とドキュメント化にはStorybookを使用しています。
+
+```bash
+npm run storybook
+# または
+yarn storybook
+```
+
+[http://localhost:6006](http://localhost:6006) にアクセスしてコンポーネントカタログを確認できます。
+
+## 開発ガイドライン
+
+### コーディング規約
+
+- コンポーネントは機能ごとにセグメントに分離し、適切な場所に配置してください
+- UIコンポーネントは`app/_components/ui`に配置してください
+- セグメント特有のコンポーネントは各セグメントの`_components`ディレクトリに配置してください
+- TypeScriptの型は厳密に定義してください
+- Storybookを使用してコンポーネントをドキュメント化してください
+
+### ブランチ戦略
+
+- `main`: プロダクション環境用ブランチ
+- `develop`: 開発用ブランチ
+- `feature/*`: 新機能開発用ブランチ
+- `fix/*`: バグ修正用ブランチ
+
+## ビルドと本番環境
+
+```bash
+# 本番用ビルド
+npm run build
+# または
+yarn build
+
+# 本番環境での実行
+npm run start
+# または
+yarn start
+```
+
+## ライセンス
+
+© 2023 Dance Team. All rights reserved.
