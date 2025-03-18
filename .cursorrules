@@ -1,4 +1,4 @@
-# 社内向けチャットアプリ開発のためのCursorルール
+# 以下のルールは必ず守ってください。
 
 ## メモリバンク(.cursor)の構成と使い方
 
@@ -89,23 +89,7 @@
    - ナレッジの共有
    - 決定事項の記録
 
-## プロジェクト概要
-
-このプロジェクトは、組織内のコミュニケーションを効率化するための社内向けチャットアプリケーションです。Next.js 14のAppRouterとSupabaseを使用し、TypeScriptとTailwind CSSで実装しています。
-
-## コーディング規約
-
-`.cursor/rules/implementationGuide.md` に詳細を定義しています。主な規約は以下の通りです：
-
-### 命名規則
-- **ファイル名**: コンポーネントはPascalCase、ユーティリティはcamelCase
-- **変数名**: 一般変数はcamelCase、定数はUPPER_CASE、型はPascalCase
-- **コンポーネント**: プレゼンテーションは`<Name>`、コンテナは`<Name>Container`
-
-### TypeScript
-- 厳格な型付けの維持
-- ランタイム検証の活用
-- 適切な型定義の集約
 
 ## 重要な参照ドキュメント
 開発にあたっては`.cursor/flow`、`.cursor/rules`および`.cursor/memory`ディレクトリ内の各ドキュメントを参照し、詳細なガイドラインに従って実装を進めてください。
+
